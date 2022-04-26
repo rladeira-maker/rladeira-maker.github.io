@@ -24,7 +24,28 @@ body {
     <p><strong style="color:red;">Área de atendimento: </strong> Jacareí, Guararema, Igaratá e Santa Branca</p>
 
     <h2 style="color:blue">Dados sobre a cidade:</h2>
-    <iframe width="1024" height="800" display="block"; src="https://www.ibge.gov.br/cidades-e-estados/sp/jacarei.html" ></iframe>
+    <iframe style="width: 100%; height: 150em; border:3px solid black; display:block;"  src="https://www.ibge.gov.br/cidades-e-estados/sp/jacarei.html" id="Iframe"></iframe>
+    <script>
+        // Selecting the iframe element
+        var frame = document.getElementById("Iframe");
+        
+        // Adjusting the iframe height onload event
+        frame.onload = function()
+        // function execute while load the iframe
+        {
+        // set the height of the iframe as
+        // the height of the iframe content
+        frame.style.height =
+        frame.contentWindow.document.body.scrollHeight + 'px';
+        
+
+        // set the width of the iframe as the
+        // width of the iframe content
+        frame.style.width =
+        frame.contentWindow.document.body.scrollWidth+'px';
+            
+        }
+        </script>                     
     <h2 style="color:blue">Serviços Educacionais</h2>
 
 <div class="pure-g">
